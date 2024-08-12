@@ -1,0 +1,22 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Building the project..."
+    - make build
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - make test
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying the project..."
+    - make deploy
